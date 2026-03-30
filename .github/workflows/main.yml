@@ -1,0 +1,19 @@
+name: My First Pipeline
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Code తీసుకో
+      uses: actions/checkout@v3
+    
+    - name: Hello Print చేయి
+      run: echo "Hello! Pipeline Run అయింది!"
+    
+    - name: Files చూపించు
+      run: ls -la
